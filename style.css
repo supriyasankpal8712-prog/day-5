@@ -1,0 +1,341 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #111;
+}
+
+
+/* =========================
+   Navigation Bar
+========================= */
+
+header {
+    background-color: #292929;
+    border-top: 3px solid #ff4b16;
+}
+
+.navbar {
+    height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    max-width: 1400px;  
+    margin: auto;
+}
+
+
+/* Logo */
+
+.logo {
+    color: #ff4b16;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* Navigation Links */
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+    gap: 38px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    padding-bottom: 7px;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #ff4b16;
+    border-bottom: 2px solid #ff4b16;
+}
+
+
+/* Contact Button */
+
+.contact-btn {
+    background-color: white;
+    color: #222;
+
+    text-decoration: none;
+
+    padding: 12px 25px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.contact-btn:hover {
+    background-color: #ff4b16;
+    color: white;
+}
+
+
+/* =========================
+   Hero Section
+========================= */
+
+.hero {
+    min-height: calc(100vh - 85px);
+
+    max-width: 1400px;
+    margin: auto;
+
+    padding: 60px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+
+/* Left Content */
+
+.hero-content {
+    max-width: 620px;
+}
+
+.hello {
+    font-size: 30px;
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    line-height: 1.15;
+
+    margin-bottom: 25px;
+}
+
+.hero-content h1 span {
+    color: #ff4b16;
+}
+
+
+/* Description */
+
+.description {
+    font-size: 15px;
+    line-height: 1.6;
+
+    color: #444;
+
+    margin-bottom: 30px;
+
+    max-width: 600px;
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+.buttons {
+    display: flex;
+    gap: 22px;
+}
+
+.buttons a {
+    text-decoration: none;
+
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+/* Hire Me */
+
+.hire-btn {
+    background-color: #000;
+    color: white;
+}
+
+.hire-btn:hover {
+    background-color: #333;
+}
+
+
+/* Experience */
+
+.experience-btn {
+    background-color: #ff4b16;
+    color: white;
+
+    border: 2px solid #000;
+}
+
+.experience-btn:hover {
+    background-color: #000;
+}
+
+
+/* =========================
+   Profile Image
+========================= */
+
+.hero-image {
+    width: 400px;
+    height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 400px;
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid #111;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 50px 5%;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 700px;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        width: 320px;
+        height: 400px;
+    }
+
+    .hero-image img {
+        width: 320px;
+        height: 400px;
+    }
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contact-btn {
+        display: none;
+    }
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hello {
+        font-size: 24px;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .hero-image {
+        width: 280px;
+        height: 350px;
+    }
+
+    .hero-image img {
+        width: 280px;
+        height: 350px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons a {
+        width: 160px;
+        text-align: center;
+    }
+}
+
